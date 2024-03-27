@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart</title>
+  <!-- Link CSS Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Link CSS tùy chỉnh -->
+  <link rel="stylesheet" href="your-custom-style.css">
+</head>
+
+<body>
+
+<!-- Header -->
+<header>
+  <nav class=" navbar navbar-expand-md navbar-dark fixed-top">
+    <a href="#" class="navbar-brand">
+      <span><img src="/images/logo_1-removebg-preview.png" width="160" height="60" alt="logo"></span>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-cont" >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-center" id="nav-cont">
+      <a href="index.html" class=" home nav-item nav-link">
+        <span class="iconify" data-icon="ant-design:home-filled" data-inline="false"></span>
+        <span>Trang chủ</span>
+      </a>
+      <a href="#" class="nav-item nav-link" >
+        <span class="iconify" data-icon="carbon:list-boxes" data-inline="false"></span>
+        <span>Sản phẩm</span>
+      </a>
+      <a href="#" class="nav-item nav-link" >
+        <span class="iconify" data-icon="ant-design:shopping-cart-outlined" data-inline="false"></span>
+        <span>Giỏ hàng</span>
+      </a>
+    </div>
+    <div class=" d-none d-lg-inline">
+      <a href="#" >
+        <span class="iconify mr-1" data-icon="basil:user-solid" data-inline="false"></span>
+        <span class="mr-3">Đăng nhập</span>
+      </a>
+    </div>
+  </nav>
+</header>
+
+<!-- Content -->
+<div class="container mt-4">
+  <h1>Giỏ hàng</h1>
+  <div class="row">
+    <div class="col-md-8">
+      <!-- Chi tiết sản phẩm trong giỏ hàng -->
+      <div class="card mb-3">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img src="product-image.jpg" class="card-img" alt="Product Image">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Tên sản phẩm</h5>
+              <p class="card-text">Giá 10 tỷ</p>
+              <p class="card-text">Số lượng 1</p>
+              <button class="btn btn-danger">Xóa</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Thêm các sản phẩm khác trong giỏ hàng tương tự -->
+
+      <div class="text-center">
+        <button class="btn btn-primary">Tiếp tục mua hàng</button>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <!-- Tổng số sản phẩm và tổng giá -->
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Chi tiết</h5>
+          <p class="card-text">Số lượng sản phẩm :1</p>
+          <p class="card-text">Giá tiền : 1 tỷ</p>
+          <button class="btn btn-success btn-block">Thanh toán</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<!-- Footer -->
+<footer style="position: absolute;bottom: 0;width: 100%;" class="bg-dark text-light">
+  <div class="container py-4">
+    <div class="row">
+      <div class="col-md-4">
+        <h5>Giới thiệu về Onism</h5>
+        <p>Cái tên Onism được tạo ra rất ngẫu hứng,xuất phát từ “Chuỗi ngày u buồn sự nghiệp,tương lai trong quá khứ của chính mình”-theo lời chia sẻ của Onsism Fouder.</p>
+      </div>
+      <div class="col-md-4">
+        <h5>Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="#">Trang chủ</a></li>
+          <li><a href="/sanpham">Sản phẩm</a></li>
+          <li><a href="#">Giỏ hàng</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <h5>Follow Us</h5>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-pinterest"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Script JS Bootstrap -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

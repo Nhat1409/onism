@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4"
+      lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width" />
+  <title>ChiTietSanPham</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+  <h4 class="mt-4">Chi tiết sản phẩm</h4>
+  <hr />
+  <div class="row">
+    <div class="col-xs-6 col-md-6">
+      <div class="hinhAnh">
+        <img th:src="@{'images/' + ${sanpham.getHinhAnh()}}" width="100" class="card-img-top">
+      </div>
+      <br/>
+      <h4>Mô tả</h4>
+      <p>Mô tả</p>
+    </div>
+    <div class="col-xs-6 col-md-6">
+      <div class="chiTiet">
+        <div class="ten">
+          <p th:text="${sanpham.getTenSP()}"></p>
+        </div>
+        <div class="gia">
+          <span>Giá:</span>
+          <p th:text="${sanpham.getGiaTien()}"></p>
+        </div>
+        <div class="soLuong">
+          <span>Số lượng:</span>
+          <input max="10" min="1" type="number" value="1" class="form-control" name="soLuong" id="soLuong"/>
+        </div>
+        <div class="kichThuoc mt-3">
+          <span>Kích Thước:</span>
+          <button th:each="kichThuoc : ${kichThuocs}" th:value="${kichThuoc.id}" th:text="${kichThuoc.tenSize}" class="btn btn-default"></button>
+        </div>
+        <td>
+          <form th:action="@{/sanPhams/add-to-cart}" method="post" class="d-inline">
+            <input type="hidden" name="id" th:value="${sanpham.getId()}">
+            <input type="hidden" name="tenSP" th:value="${sanpham.getTenSP()}">
+            <input type="hidden" name="giaTien" th:value="${sanpham.getGiaTien()}">
+            <input type="hidden" name="kichThuoc" th:value="${sanpham.KichThuoc.getTenSize()}">
+            <br />
+            <img src="" width="100" class="bangKichThuoc mt-3" alt="Bảng kích thước" />
+            <div class="nutThem mt-3">
+              <button class="btn btn-primary" type="submit" onclick="return confirm('Are you sure you want to add this book to cart?')">Thêm vào giỏ hàng</button>
+            </div>
+          </form>
+        </td>
+<!--        <div class="Mau mt-3">-->
+<!--          <span>Màu:</span>-->
+<!--          <span><input type="checkbox" /> Đỏ</span>-->
+<!--          <span><input type="checkbox" /> Đen</span>-->
+<!--          <span><input type="checkbox" /> Kem</span>-->
+<!--          <span><input type="checkbox" /> Xám</span>-->
+<!--        </div>-->
+
+
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
